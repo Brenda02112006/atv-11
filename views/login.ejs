@@ -1,31 +1,33 @@
+<!-- login.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container mt-5">
-    <h2 class="text-center">Login</h2>
-    <% if (error) { %>
-      <div class="alert alert-danger" role="alert">
-        <%= error %>
-      </div>
-    <% } %>
-    <form action="/login" method="POST">
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Senha:</label>
-        <input type="password" class="form-control" id="password" name="password" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Entrar</button>
-    </form>
-  </div>
+    <div class="container mt-5">
+        <h2 class="text-center">FAÇA SEU LOGIN:</h2>
+        <% if (error) { %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+            <p class="mt-3">Não possui uma conta? <a href="/cadastro">Faça seu cadastro</a></p> <!-- Link para a página de cadastro -->
+        </form>
+    </div>
 </body>
 </html>
